@@ -51,12 +51,12 @@
   </div>
 
   <div class="modes">
-    <button class="mode on" id="mPlay">&#9654; Play</button>
-    <button class="mode" id="mCompare">&#8596; Compare</button>
+    <button class="mode" id="mPlay">&#9654; Play</button>
+    <button class="mode on" id="mCompare">&#8596; Compare</button>
   </div>
 
   <!-- PLAY -->
-  <div id="playPanel">
+  <div id="playPanel" class="hidden">
     <div class="stage" id="stage"><div class="lbl" id="lbl"></div></div>
     <div class="row">
       <button class="play" id="play">&#9654;</button>
@@ -71,7 +71,7 @@
   </div>
 
   <!-- COMPARE -->
-  <div id="comparePanel" class="hidden">
+  <div id="comparePanel">
     <div class="pickers">
       <label>Left (before)<select id="selL"></select></label>
       <label>Right (after)<select id="selR"></select></label>
@@ -189,5 +189,6 @@
   }
   $("mPlay").onclick=function(){ setMode("play"); };
   $("mCompare").onclick=function(){ setMode("compare"); };
+  setMode("compare");
 })();
 </script>
